@@ -32,21 +32,26 @@ function InitializeBannerShiftSettings(){
     }
 
     MaxEffectAt = HeaderHeight + TopBannerHeight;
-    MinEffectAt = HeaderHeight;
+    MinEffectAt = 0;
     MaxPixelShift = TopBannerHeight * BackgroundShiftEffectMultiplier;
 
     MiddleBannerHeight = parseFloat($(".MiddleBannerImage").css("height"))
     MiddleBannerTop = TopBannerHeight * 0.01 *  parseFloat(getComputedStyle(cssRoot).getPropertyValue('--BannerTopPercentage'))
     MiddleBannerMaxAddition = TopBannerHeight - MiddleBannerHeight * MiddleBannerShiftMultiplier;
+    CountNewBannerAndBackgroundLocation()
 }
 
 // moving the banner and logo middle of the banner
 $(window).scroll(function(event){
+    CountNewBannerAndBackgroundLocation()
+});
+
+function CountNewBannerAndBackgroundLocation(){
     currentScroll = parseFloat($(window).scrollTop())
 
     // Between 0 and 1
     var currentEffect = (Math.max(0, (Math.min(currentScroll, MaxEffectAt) - MinEffectAt))) / MaxEffectAt;
 
-    $(".TopBanner").css("background-position-y", MaxPixelShift * currentEffect);
+    $(".TopBanner").css("background-position-y", MaxPixelShift * currentEffect - (HeaderHeight * BackgroundShiftEffectMultiplier));
     $(".MiddleBannerImage").css("top", MiddleBannerTop + currentEffect * MiddleBannerMaxAddition);
-});
+}

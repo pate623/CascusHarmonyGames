@@ -1,9 +1,9 @@
 :root {
-	--BannerTopPercentage: 24%;
+	--BannerTopPercentage: 22%;
 }
 
 topBanner {
-	background: url(../Pictures/Banner/SwarmingAlienShips.jpg);
+	background: url(../Pictures/Banner/OilPaintDark.jpg);
 	background-repeat: no-repeat;
 	background-size: cover;
 	height: 32vw;
@@ -11,8 +11,10 @@ topBanner {
 }
 
 .MiddleBannerImage{ /* Image adding forces image setting to resets, have to declare settings here */
-	background: url(../Pictures/Logo/DefenderOfKuiperBelt_NoBackground_02.png);
+	background: url(../Pictures/Logo/BattleMagicians.png);
 	background-size: contain;
 	background-repeat: no-repeat;
 	background-position: center;
+	width: 50%;
+	height: 35%;
 }
