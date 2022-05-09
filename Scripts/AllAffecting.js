@@ -1,4 +1,4 @@
-// Shifting banner background based on window location
+// Shifting banner background an logo based on window location
 var BackgroundShiftEffectMultiplier = 0.62; // Higher number goes faster down, max 1
 var MiddleBannerShiftMultiplier = 1.0; // Lower number goes faster down
 
@@ -6,7 +6,6 @@ var TopBannerHeight = 0.0;
 var HeaderHeight = 0.0;
 
 var MaxEffectAt = 0.0;
-var MinEffectAt = 0.0;
 var MaxPixelShift = 0.0;
 
 var MiddleBannerHeight = 0.0;
@@ -16,10 +15,16 @@ var MiddleBannerMaxAddition = 0.0;
 // Change banner shifting settings on document load an on window resize
 $(document).ready(function(){
     InitializeBannerShiftSettings()
+    CountNewBannerAndBackgroundLocation()
 });
 
 $(window).resize(function(){
     InitializeBannerShiftSettings()
+    CountNewBannerAndBackgroundLocation()
+});
+
+$(window).scroll(function(event){
+    CountNewBannerAndBackgroundLocation()
 });
 
 function InitializeBannerShiftSettings(){
@@ -32,25 +37,18 @@ function InitializeBannerShiftSettings(){
     }
 
     MaxEffectAt = HeaderHeight + TopBannerHeight;
-    MinEffectAt = 0;
     MaxPixelShift = TopBannerHeight * BackgroundShiftEffectMultiplier;
 
     MiddleBannerHeight = parseFloat($(".MiddleBannerImage").css("height"))
     MiddleBannerTop = TopBannerHeight * 0.01 *  parseFloat(getComputedStyle(cssRoot).getPropertyValue('--BannerTopPercentage'))
     MiddleBannerMaxAddition = TopBannerHeight - MiddleBannerHeight * MiddleBannerShiftMultiplier;
-    CountNewBannerAndBackgroundLocation()
 }
-
-// moving the banner and logo middle of the banner
-$(window).scroll(function(event){
-    CountNewBannerAndBackgroundLocation()
-});
 
 function CountNewBannerAndBackgroundLocation(){
     currentScroll = parseFloat($(window).scrollTop())
 
     // Between 0 and 1
-    var currentEffect = (Math.max(0, (Math.min(currentScroll, MaxEffectAt) - MinEffectAt))) / MaxEffectAt;
+    var currentEffect = (Math.max(0, (Math.min(currentScroll, MaxEffectAt)))) / MaxEffectAt;
 
     $(".TopBanner").css("background-position-y", MaxPixelShift * currentEffect - (HeaderHeight * BackgroundShiftEffectMultiplier));
     $(".MiddleBannerImage").css("top", MiddleBannerTop + currentEffect * MiddleBannerMaxAddition);

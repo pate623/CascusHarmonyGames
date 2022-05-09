@@ -12,16 +12,12 @@ body, div, dl, dt, dd, h1, h2, h3, h4, h5, h6, p, pre, code, blockquote {
 	padding:0;
 	-webkit-text-size-adjust: 100%;
 }
-
 html, body {
     width: 100%;
     height: 100%;
 }
-
-/* Site wide font */
 body {
-	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-	line-height: 1.25; /* Ensures all stays at default settings despite Bootstraps own css additions */
+	line-height: 1.25;
 }
 
 /* Link underscore and highlight behavior */
@@ -38,6 +34,11 @@ a:visited {
 }
 a:hover, a:active, a:focus { 
 	text-decoration: none;
+}
+
+/* Site wide font */
+body {
+	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 /* Keeping footer in the bottom of the window */
