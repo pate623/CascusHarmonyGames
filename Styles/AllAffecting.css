@@ -1,0 +1,172 @@
+:root {
+	--BannerTopPercentage: 32%;
+	--FullRadiusGradient: linear-gradient(90deg, rgba(25,17,66,1) 0%, rgba(74,25,83,1) 51%, rgba(35,88,105,1) 100%);
+	--FullRadiusBorderedGradient: linear-gradient(0deg, rgba(25,17,66,1) 0%, rgba(74,25,83,1) 10%, rgba(74,25,83,1) 50%, rgba(35,88,105,1) 100%);
+	--PartRadiusGradient: linear-gradient(90deg, rgba(55,19,70,1) 0%, rgba(74,25,83,1) 71%, rgba(50,30,90,1) 100%);
+	--ContentBorderRadius: 1vmin;
+}
+
+/* Common clearing commands */
+body, div, dl, dt, dd, h1, h2, h3, h4, h5, h6, p, pre, code, blockquote {
+	margin:0;
+	padding:0;
+	-webkit-text-size-adjust: 100%;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+/* Site wide font */
+body {
+	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+	line-height: 1.25; /* Ensures all stays at default settings despite Bootstraps own css additions */
+}
+
+/* Link underscore and highlight behavior */
+a{
+	text-decoration: none;
+}
+a:link {
+	color: #000; /*text before visited*/
+	text-decoration: none;
+}
+a:visited {
+	color: #000; /*text after visited*/
+	text-decoration: none;
+}
+a:hover, a:active, a:focus { 
+	text-decoration: none;
+}
+
+/* Keeping footer in the bottom of the window */
+main {
+	min-height: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: stretch;
+}
+article {
+	flex-grow: 1;
+	z-index: 1;
+	background-color: #FFF;
+}
+header, main, footer {
+	flex-shrink: 0;
+}
+footer{
+	z-index: 1;
+}
+
+/* Banner */
+.MiddleBannerImage{
+	z-index: 0;
+	width: 42%;
+	height: 30%;
+	margin: auto;
+	position: relative;
+	top: var(--BannerTopPercentage);
+}
+
+/* Article */
+article{
+	background-image: url(../Pictures/patterns/repeating-backgound.jpg);
+	background-size: 16.5vw;
+	background-repeat: repeat;
+	padding: 5vw;
+}
+
+.MainSlogan{
+	background: rgb(25,17,66);
+	background: linear-gradient(0deg, rgba(46,37,66,1) 0%, rgba(74,39,83,1) 10%, rgba(50,29,63,1) 100%);
+	color: #FFF;
+	text-align: center;
+	border-radius: var(--ContentBorderRadius);
+	padding: 2.2vmin;
+	margin-bottom: 2vh;
+	font-size: 3.1vmin;
+}
+
+.Content{
+	border-radius: var(--ContentBorderRadius);
+	padding: 0.6vmin;
+	background: rgb(25,17,66);
+	background: var(--FullRadiusBorderedGradient);
+}
+
+.Test{
+	background-color: #DDD;
+	background-blend-mode: color-burn;
+	padding-top: 3vw;
+	padding-left: 4vw;
+	padding-right: 4vw;
+	height: 20vh;
+	font-size: 2.4vmin;
+	height: auto;
+}
+.Test:first-child{
+	border-top-left-radius: var(--ContentBorderRadius);
+	border-top-right-radius: var(--ContentBorderRadius);
+	padding-top: 2vmin;
+}
+.Test:last-child{
+	border-bottom-left-radius: var(--ContentBorderRadius);
+	border-bottom-right-radius: var(--ContentBorderRadius);
+	padding-bottom: 2vmin;
+}
+
+.ContentImage{
+	width: 100%;
+}
+
+p.ContentQuote{
+	font-size: 2vmin;
+	font-style: italic;
+	margin-bottom: 0.5vmin;
+	margin-top: 0.5vmin;
+}
+
+.DemoAvailable{
+	margin-top: 5vh;
+	margin-left: 3%;
+	padding: 0.5vw 0vw 0.6vw 4.4vw;
+	width: 55%;
+	text-align: left;
+	border-style: double;
+	border-width: 0.3vw;
+	border-radius: 1vw;
+	border-color: rgba(120,170,90,1);
+	background: linear-gradient(41deg, rgba(50,70,20,1) 0%,  rgba(50,140,63,1) 100%);
+	color: #FFF;
+	font-size: 3vw;
+	user-select: none;
+}
+
+.LongBreak{
+	padding-top: 11vw;
+}
+
+/* Carousel */
+.carousel-indicators{
+	bottom: calc(-1.55vh + -1.55vw);
+}
+
+.carousel-indicators li{
+	width: 1.1vw;
+	height: 1.1vw;
+	border-radius: 100%;
+	margin-right: 0.4vw;
+	border-color: #555;
+}
+.carousel-indicators .active{
+	width: 1.1vw; 
+	height: 1.1vw;
+	border-radius: 100%;
+	margin-right: 0.4vw;
+	background-color: #424;
+}
+span.glyphicon {
+	font-size: 2.6vw !important;
+	/*color:  rgba(30, 10, 30, 70)*/
+}

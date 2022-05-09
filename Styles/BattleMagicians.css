@@ -1,0 +1,18 @@
+:root {
+	--BannerTopPercentage: 24%;
+}
+
+topBanner {
+	background: url(../Pictures/Banner/SwarmingAlienShips.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 32vw;
+	top: 0;
+}
+
+.MiddleBannerImage{ /* Image adding forces image setting to resets, have to declare settings here */
+	background: url(../Pictures/Logo/DefenderOfKuiperBelt_NoBackground_02.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+}

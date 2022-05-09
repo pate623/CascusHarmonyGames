@@ -1,0 +1,23 @@
+:root {
+	--BannerTopPercentage: 11%;
+}
+
+topBanner{
+	background: url(../Pictures/Banner/CloudsAndSpace.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 32vw;
+	top: 0;
+}
+
+.MiddleBannerImage{ /* Image adding forces image setting to resets, have to declare settings here */
+	background: url(../Pictures/Logo/CascusHarmony_NoBackgroundBig.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.MiddleBannerImage{
+	width: 70%;
+	height: 60%;
+}

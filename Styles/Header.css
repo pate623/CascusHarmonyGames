@@ -1,0 +1,141 @@
+:root {
+	--DesktopHeaderHeight: 8vmin;
+	--HeaderTextColor: #A5D;
+	--HeaderTextColorHover: #93a;
+}
+
+header{
+	height: var(--DesktopHeaderHeight);
+	background: rgb(25,17,66);
+	background: var(--FullRadiusGradient);
+	border: 0;
+	border-bottom: 0.3vmin;
+	border-style: solid;
+	border-color: #204;
+	position: static;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 2;
+}
+
+/*
+/ Desktop only
+*/
+#HeaderLogo {
+	background: url(../Pictures/Logo/CascusHarmony_NoBackground.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 7.5vmin;
+	width: 7.5vmin;
+	margin-left: 5vw;
+	margin-top: 0.3vh;
+	margin-right: 0;
+	float: left;
+}
+
+#HeaderLinks{
+	float: left;
+	height: var(--DesktopHeaderHeight);
+}
+
+.HeaderText{
+	float: left;
+	height: var(--DesktopHeaderHeight) - 1.6vmin;
+	font-size: 3.4vmin;
+	color: var(--HeaderTextColor);
+	margin-left: 3.2vw;
+	margin-top: 1.6vmin;
+	user-select: none;
+	cursor:pointer;
+}
+.HeaderText:hover{
+	color: var(--HeaderTextColorHover);
+}
+
+/*
+/ Mobile only
+*/
+.HeaderLogo_Mobile{
+	background: url(../Pictures/Logo/CascusHarmony_NoBackground.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 11vw;
+	width: 11vw;
+	margin-left: 6vw;
+	margin-top: 0.9vw;
+	margin-right: 4.5vw;
+	float: left;
+}
+
+/* Burger */
+.HeaderBurger_Mobile{
+	float: right;
+	height: 11vw;
+	width: 5.8vw;
+	margin-right: 3.3vw;
+	margin-top: 2.6vw;
+	padding-left: 0;
+}
+.HeaderMenuLine_Mobile{
+	margin-top: 1.3vw;
+	height: 0.6vw;
+	background-color: #fff;
+}
+
+/* Cross when menu is open */
+.HeaderCross_Mobile{
+	visibility: collapse;
+	background: url(../Pictures/Icons/Cross.svg);
+	background-repeat: no-repeat;
+	background-size:contain;
+	float: right;
+	text-align: right;
+	height: 7vw;
+	width: 6.5vw;
+	margin-right: 2.05vw;
+	margin-top: 2.5vw;
+	padding-left: 2vw;
+	font-size: 6vw;
+}
+
+/* Nav when the window isn't at the top */
+.ScrolledHeader{
+	height: 8vmin;
+	background: rgb(25,17,66);
+	background: var(--FullRadiusGradient);
+	border: 0;
+	border-bottom: 0.3vmin;
+	border-style: solid;
+	border-color: #204;
+	visibility: collapse;
+	position:fixed;
+	z-index: 5;
+	top: 0;
+	left: 0;
+	right: 0;
+}
+
+/* Links dropdown */
+.HeaderLinks_Mobile{
+	visibility: collapse;
+	position: fixed;
+	z-index: 3;
+	margin-top: 12vw;
+	height: 80vh;
+	width: 100vw;
+	background: rgb(25,17,66);
+}
+.HeaderText_Mobile{
+	font-variant: small-caps;
+	font-size: 6vmin;
+	color: var(--HeaderTextColor);
+	padding-left: 5vw;
+	padding-top: 2.4vh;
+	padding-bottom: 2vh;
+	user-select: none;
+	border: 0;
+	border-bottom: 0.5vmin;
+	border-style: solid;
+	border-color: #d8f;
+}

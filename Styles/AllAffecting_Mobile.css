@@ -1,0 +1,4 @@
+/* Mobile text scaling */
+p {
+	-webkit-text-size-adjust: 150%;
+}
