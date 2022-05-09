@@ -32,7 +32,7 @@ function InitializeBannerShiftSettings(){
     }
 
     MaxEffectAt = HeaderHeight + TopBannerHeight;
-    MinEffectAt = HeaderHeight;
+    MinEffectAt = 0;
     MaxPixelShift = TopBannerHeight * BackgroundShiftEffectMultiplier;
 
     MiddleBannerHeight = parseFloat($(".MiddleBannerImage").css("height"))
@@ -52,6 +52,6 @@ function CountNewBannerAndBackgroundLocation(){
     // Between 0 and 1
     var currentEffect = (Math.max(0, (Math.min(currentScroll, MaxEffectAt) - MinEffectAt))) / MaxEffectAt;
 
-    $(".TopBanner").css("background-position-y", MaxPixelShift * currentEffect);
+    $(".TopBanner").css("background-position-y", MaxPixelShift * currentEffect - (HeaderHeight * BackgroundShiftEffectMultiplier));
     $(".MiddleBannerImage").css("top", MiddleBannerTop + currentEffect * MiddleBannerMaxAddition);
 }

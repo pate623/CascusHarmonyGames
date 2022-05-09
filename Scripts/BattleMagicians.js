@@ -1,2 +1,2 @@
-MiddleBannerShiftMultiplier = 1.2;
-BackgroundShiftEffectMultiplier = 0.8;
+BackgroundShiftEffectMultiplier = 0.7; // Higher number goes faster down, max 1
+MiddleBannerShiftMultiplier = 1.38; // Lower number goes faster down
