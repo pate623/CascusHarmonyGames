@@ -38,10 +38,15 @@ function InitializeBannerShiftSettings(){
     MiddleBannerHeight = parseFloat($(".MiddleBannerImage").css("height"))
     MiddleBannerTop = TopBannerHeight * 0.01 *  parseFloat(getComputedStyle(cssRoot).getPropertyValue('--BannerTopPercentage'))
     MiddleBannerMaxAddition = TopBannerHeight - MiddleBannerHeight * MiddleBannerShiftMultiplier;
+    CountNewBannerAndBackgroundLocation()
 }
 
 // moving the banner and logo middle of the banner
 $(window).scroll(function(event){
+    CountNewBannerAndBackgroundLocation()
+});
+
+function CountNewBannerAndBackgroundLocation(){
     currentScroll = parseFloat($(window).scrollTop())
 
     // Between 0 and 1
@@ -49,4 +54,4 @@ $(window).scroll(function(event){
 
     $(".TopBanner").css("background-position-y", MaxPixelShift * currentEffect);
     $(".MiddleBannerImage").css("top", MiddleBannerTop + currentEffect * MiddleBannerMaxAddition);
-});
+}
