@@ -10,7 +10,7 @@ topBanner {
 	top: 0;
 }
 
-.MiddleBannerImage{ /* Image adding forces image setting to resets, have to declare settings here */
+.middleBannerImage{ /* Image adding forces image setting to resets, have to declare settings here */
 	background: url(../Pictures/Logo/DefenderOfKuiperBelt_NoBackground_02.png);
 	background-size: contain;
 	background-repeat: no-repeat;

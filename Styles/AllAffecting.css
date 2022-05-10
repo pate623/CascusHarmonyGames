@@ -60,11 +60,11 @@ footer{
 }
 
 /* Banner */
-.TopBanner{
+.topBanner{
 	z-index: -3;	
 }
 
-.MiddleBannerImage{
+.middleBannerImage{
 	z-index: -3;
 	width: 42%;
 	height: 30%;
@@ -80,7 +80,7 @@ article{
 }
 
 /* Background pattern */
-.ArticleStaticBG{
+.articleStaticBG{
 	z-index: -2;
 	position:absolute;
 	user-select: none;
@@ -94,7 +94,7 @@ article{
 	background-position-y: calc(9.475vw + 13.35vw); /* 2.8vw  9.475vw */
 }
 
-.ArticleBGAlter{
+.articleBGAlter{
 	z-index: -2;
 	position:absolute;
 	user-select: none;
@@ -109,7 +109,7 @@ article{
 	animation-name: visionToggle;
 	animation-iteration-count: infinite;
 }
-.ArticleBGAlter2{
+.articleBGAlter2{
 	z-index: -2;
 	position:absolute;
 	user-select: none;
@@ -126,7 +126,7 @@ article{
 }
 
 
-.ArticleSecondBG{
+.articleSecondBG{
 	z-index: -1;
 	position:absolute;
 	user-select: none;
@@ -141,7 +141,7 @@ article{
 	animation-name: disappear;
 	animation-iteration-count: infinite;
 }
-.ArticleSThirdBG{
+.articleSThirdBG{
 	z-index: -1;
 	position:absolute;
 	user-select: none;
@@ -247,7 +247,7 @@ article{
 	}
 }
 
-.MainSlogan{
+.mainSlogan{
 	background: rgb(25,17,66);
 	background: linear-gradient(0deg, rgba(46,37,66,1) 0%, rgba(74,39,83,1) 10%, rgba(50,29,63,1) 100%);
 	color: #FFF;
@@ -260,14 +260,14 @@ article{
 	font-size: 3.1vmin;
 }
 
-.Content{
+.content{
 	border-radius: var(--ContentBorderRadius);
 	padding: 0.6vmin;
 	background: rgb(25,17,66);
 	background: var(--FullRadiusBorderedGradient);
 }
 
-.Test{
+.test{
 	background-color: #DDD;
 	background-blend-mode: color-burn;
 	padding-top: 3vw;
@@ -277,29 +277,29 @@ article{
 	font-size: 2.4vmin;
 	height: auto;
 }
-.Test:first-child{
+.test:first-child{
 	border-top-left-radius: var(--ContentBorderRadius);
 	border-top-right-radius: var(--ContentBorderRadius);
 	padding-top: 2vmin;
 }
-.Test:last-child{
+.test:last-child{
 	border-bottom-left-radius: var(--ContentBorderRadius);
 	border-bottom-right-radius: var(--ContentBorderRadius);
 	padding-bottom: 2vmin;
 }
 
-.ContentImage{
+.contentImage{
 	width: 100%;
 }
 
-p.ContentQuote{
+p.contentQuote{
 	font-size: 2vmin;
 	font-style: italic;
 	margin-bottom: 0.5vmin;
 	margin-top: 0.5vmin;
 }
 
-.DemoAvailable{
+.demoAvailable{
 	margin-top: 5vh;
 	margin-left: 3%;
 	padding: 0.5vw 0vw 0.6vw 4.4vw;
@@ -315,7 +315,7 @@ p.ContentQuote{
 	user-select: none;
 }
 
-.LongBreak{
+.longBreak{
 	padding-top: 11vw;
 }
 

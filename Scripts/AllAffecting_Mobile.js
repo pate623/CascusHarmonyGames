@@ -16,14 +16,15 @@ $(document).ready(function(){
 
 // Swipe detection for carousel
 $(document).ready(function(){
-	var carousel = document.querySelector("#KuiperBeltCarousel");
+	let carousel = document.querySelector("#kuiperBeltCarousel");
+	if(carousel == null){return}
 	
 	carousel.addEventListener("touchstart", startTouch, false);
 	carousel.addEventListener("touchmove", moveTouch, false);
 	
 	// Swipe Up / Down / Left / Right
-	var initialX = null;
-	var initialY = null;
+	let initialX = null;
+	let initialY = null;
 	
 	function startTouch(e) {
 	    initialX = e.touches[0].clientX;
@@ -33,11 +34,11 @@ $(document).ready(function(){
 	function moveTouch(e) {
 	    if (initialX === null || initialY === null) { return; }
 
-	    var currentX = e.touches[0].clientX;
-	    var currentY = e.touches[0].clientY;
+	    let currentX = e.touches[0].clientX;
+	    let currentY = e.touches[0].clientY;
 	
-	    var diffX = initialX - currentX;
-	    var diffY = initialY - currentY;
+	    let diffX = initialX - currentX;
+	    let diffY = initialY - currentY;
 	
 	    if (Math.abs(diffX) > Math.abs(diffY)) { // Sliding horizontally
 	        if (diffX > 0) { // swiped left

@@ -7,7 +7,7 @@ footer{
 	padding-left: 5vw;
 }
 
-.FooterInfo{
+.footerInfo{
 	float: left;
 	margin-top: 2vmin;
 	width: 30vw;
@@ -17,7 +17,7 @@ footer{
 	text-align: center;
 }
 
-.FooterLogo{
+.footerLogo{
 	background: url(../Pictures/Logo/CascusHarmony_NoBackground.png);
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -28,7 +28,7 @@ footer{
 	float: left;
 }
 
-#FooterSteamLogo{
+#footerSteamLogo{
 	height: 3.2vw;
 	width: 10vw;
 	margin-left: auto;
@@ -38,7 +38,7 @@ footer{
 	background-size: cover;
 }
 
-#FooterLinkedInLogo{
+#footerLinkedInLogo{
 	height: 2.6vw;
 	width: 10vw;
 	margin-top: 0.5vw;
@@ -49,7 +49,7 @@ footer{
 	background-size: cover;
 }
 
-#FooterDiscordLogo{
+#footerDiscordLogo{
 	height: 2.2vw;
 	width: 11vw;
 	margin-top: 1.1vw;
@@ -60,7 +60,7 @@ footer{
 	background-size: cover;
 }
 
-.FooterInfoText{
+.footerInfoText{
 	float: left;
 	width: 30vw;
 	margin-top: 4vw;
@@ -70,6 +70,6 @@ footer{
 	text-align: center;
 }
 
-span.FooterLinkText{
+span.footerLinkText{
 	color: #FFF;
 }

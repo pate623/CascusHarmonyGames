@@ -30,12 +30,13 @@ $(window).scroll(function(event){
 });
 
 function InitializeBannerShiftSettings(){
-    var cssRoot = document.querySelector(':root');
+    let cssRoot = document.querySelector(':root');
 
-    TopBannerHeight = parseFloat($(".TopBanner").css("height"));
-    
+    TopBannerHeight = parseFloat($(".topBanner").css("height"));
+
     // Some issues with mobile
-    HeaderHeight = parseFloat($(".Header").css("height")) == 0 ? HeaderHeight : parseFloat($(".Header").css("height"))
+    let auxiliaryHeaderHeight = parseFloat($(".header").css("height"))
+    HeaderHeight = auxiliaryHeaderHeight == 0 ? HeaderHeight : auxiliaryHeaderHeight
     if(IsMobile){
         HeaderHeight *= 1.5
     }
@@ -43,7 +44,7 @@ function InitializeBannerShiftSettings(){
     MaxEffectAt = HeaderHeight + TopBannerHeight;
     MaxPixelShift = TopBannerHeight * BackgroundShiftEffectMultiplier;
 
-    MiddleBannerHeight = parseFloat($(".MiddleBannerImage").css("height"))
+    MiddleBannerHeight = parseFloat($(".middleBannerImage").css("height"))
     MiddleBannerTop = TopBannerHeight * 0.01 *  parseFloat(getComputedStyle(cssRoot).getPropertyValue('--BannerTopPercentage'))
     MiddleBannerMaxAddition = TopBannerHeight - MiddleBannerHeight * MiddleBannerShiftMultiplier;
 }
@@ -54,17 +55,17 @@ function CountNewBannerAndBackgroundLocation(){
     // Between 0 and 1
     var currentEffect = (Math.max(0, (Math.min(currentScroll, MaxEffectAt)))) / MaxEffectAt;
 
-    $(".TopBanner").css("background-position-y", MaxPixelShift * currentEffect - (HeaderHeight * BackgroundShiftEffectMultiplier));
-    $(".MiddleBannerImage").css("top", MiddleBannerTop + currentEffect * MiddleBannerMaxAddition);
+    $(".topBanner").css("background-position-y", MaxPixelShift * currentEffect - (HeaderHeight * BackgroundShiftEffectMultiplier));
+    $(".middleBannerImage").css("top", MiddleBannerTop + currentEffect * MiddleBannerMaxAddition);
 }
 
 function CountArticleBackgroundSizes(){
-    let auxillaryBottom =  $(".Footer").position().top;
+    let auxillaryBottom =  $(".footer").position().top;
 
-    $(".ArticleBackgrounds").css("top", TopBannerHeight + HeaderHeight);
+    $(".articleBackgrounds").css("top", TopBannerHeight + HeaderHeight);
     if(IsMobile){
-        $(".ArticleBackgrounds").css("height", (auxillaryBottom - (TopBannerHeight + (HeaderHeight / 3))));
+        $(".articleBackgrounds").css("height", (auxillaryBottom - (TopBannerHeight + (HeaderHeight / 3))));
     }else{
-        $(".ArticleBackgrounds").css("height", (auxillaryBottom - (TopBannerHeight + HeaderHeight)));
+        $(".articleBackgrounds").css("height", (auxillaryBottom - (TopBannerHeight + HeaderHeight)));
     }
 }

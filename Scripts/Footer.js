@@ -8,8 +8,8 @@ $(window).resize(function(){
 });
 
 function CountPaddingTopForFooterElements(){
-    $('.FooterInfoText').each(function(){
-        var newHeight = parseFloat($('.Footer').height() - $(this).height()) * 0.45;
+    $('.footerInfoText').each(function(){
+        let newHeight = parseFloat($('.footer').height() - $(this).height()) * 0.45;
          $(this).css("margin-top", newHeight)
      });
 }
