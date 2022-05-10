@@ -72,10 +72,12 @@ footer{
 
 /* Article */
 article{
-	background-image: url(../Pictures/patterns/repeating-backgound.jpg);
-	background-size: 16.5vw;
+	background-image: url(../Pictures/patterns/toxicSmall.jpg);
+	background-size: 25vw;
 	background-repeat: repeat;
-	padding: 5vw;
+	background-position-x: -3.2vw;
+	background-position-y: -0.1w;
+	padding: 4.7vw 5.5vw 8.5vmax 5.5vw;
 }
 
 .MainSlogan{
@@ -85,7 +87,9 @@ article{
 	text-align: center;
 	border-radius: var(--ContentBorderRadius);
 	padding: 2.2vmin;
-	margin-bottom: 2vh;
+	margin: auto;
+	width: 75vmin;
+	margin-bottom: 4.2vh;
 	font-size: 3.1vmin;
 }
 
