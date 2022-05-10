@@ -23,13 +23,13 @@ header{
 / Desktop only
 */
 #headerLogo {
-	background: url(../Pictures/Logo/CascusHarmony_NoBackground.png);
+	background: url(../Pictures/Logo/CascusHarmony_NoBackgroundBig.png);
 	background-repeat: no-repeat;
 	background-size: cover;
-	height: 7.5vmin;
-	width: 7.5vmin;
+	height: 6.45vmin;
+	width: 6.45vmin;
 	margin-left: 5vw;
-	margin-top: 0.3vh;
+	margin-top: 0.9vh;
 	margin-right: 0;
 	float: left;
 }
@@ -57,7 +57,7 @@ header{
 / Mobile only
 */
 .headerLogo_Mobile{
-	background: url(../Pictures/Logo/CascusHarmony_NoBackground.png);
+	background: url(../Pictures/Logo/CascusHarmony_NoBackgroundBig.png);
 	background-repeat: no-repeat;
 	background-size: cover;
 	height: 11vw;
