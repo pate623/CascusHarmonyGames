@@ -73,11 +73,11 @@ footer{
 /* Article */
 article{
 	background-image: url(../Pictures/patterns/toxicSmall.jpg);
-	background-size: 25vw;
+	background-size: 26.7vw;
 	background-repeat: repeat;
-	background-position-x: -3.2vw;
-	background-position-y: -0.1w;
-	padding: 4.7vw 5.5vw 8.5vmax 5.5vw;
+	background-position-x: -4vw;
+	background-position-y: 2.8vw; /* 2.8vw 16vw */
+	padding: 4.7vw 5.5vw 9.5vmax 5.5vw;
 }
 
 .MainSlogan{
