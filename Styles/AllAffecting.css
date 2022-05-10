@@ -195,7 +195,7 @@ article{
 	0% {
 		opacity: 0.5;
 	}
-	23% {
+	18% {
 		opacity: 0.7;
 	}
 	27% {
@@ -205,13 +205,13 @@ article{
 		opacity: 0.6;
 	}
 	55% {
-		opacity: 0.37;
+		opacity: 0.4;
 	}
-	85% {
+	75% {
 		opacity: 0.2;
 	}
-	95% {
-		opacity: 0.35;
+	90% {
+		opacity: 0.4;
 	}
 	100% {
 		opacity: 0.5;
@@ -225,9 +225,9 @@ article{
 		opacity: 0.55;
 	}
 	40% {
-		opacity: 0.32;
+		opacity: 0.35;
 	}
-	45% {
+	47% {
 		opacity: 0.2;
 	}
 	55% {
