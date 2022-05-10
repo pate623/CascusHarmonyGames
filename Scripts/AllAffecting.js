@@ -16,11 +16,13 @@ var MiddleBannerMaxAddition = 0.0;
 $(document).ready(function(){
     InitializeBannerShiftSettings()
     CountNewBannerAndBackgroundLocation()
+    CountArticleBackgroundSizes()
 });
 
 $(window).resize(function(){
     InitializeBannerShiftSettings()
     CountNewBannerAndBackgroundLocation()
+    CountArticleBackgroundSizes()
 });
 
 $(window).scroll(function(event){
@@ -52,4 +54,11 @@ function CountNewBannerAndBackgroundLocation(){
 
     $(".TopBanner").css("background-position-y", MaxPixelShift * currentEffect - (HeaderHeight * BackgroundShiftEffectMultiplier));
     $(".MiddleBannerImage").css("top", MiddleBannerTop + currentEffect * MiddleBannerMaxAddition);
+}
+
+function CountArticleBackgroundSizes(){
+    let auxillaryBottom =  $(".Footer").position().top;
+
+    $(".ArticleBackgrounds").css("top", TopBannerHeight + HeaderHeight);
+    $(".ArticleBackgrounds").css("height", (auxillaryBottom - (TopBannerHeight + HeaderHeight)));
 }

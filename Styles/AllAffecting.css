@@ -50,7 +50,6 @@ main {
 }
 article {
 	flex-grow: 1;
-	z-index: 1;
 	background-color: #FFF;
 }
 header, main, footer {
@@ -61,8 +60,12 @@ footer{
 }
 
 /* Banner */
+.TopBanner{
+	z-index: -3;	
+}
+
 .MiddleBannerImage{
-	z-index: 0;
+	z-index: -3;
 	width: 42%;
 	height: 30%;
 	margin: auto;
@@ -72,12 +75,176 @@ footer{
 
 /* Article */
 article{
+	background: rgba(0,0,0,0);
+	padding: 4.7vw 5.5vw 9.5vmax 5.5vw;
+}
+
+/* Background pattern */
+.ArticleStaticBG{
+	z-index: -2;
+	position:absolute;
+	user-select: none;
+	left: 0;
+	right: 0;
+	background-color: #000;
 	background-image: url(../Pictures/patterns/toxicSmall.jpg);
 	background-size: 26.7vw;
 	background-repeat: repeat;
-	background-position-x: -4vw;
-	background-position-y: 2.8vw; /* 2.8vw 16vw */
-	padding: 4.7vw 5.5vw 9.5vmax 5.5vw;
+	background-position-x: calc(   -4vw + 13.35vw);/* -4vw */
+	background-position-y: calc(9.475vw + 13.35vw); /* 2.8vw  9.475vw */
+}
+
+.ArticleBGAlter{
+	z-index: -2;
+	position:absolute;
+	user-select: none;
+	left: 0;
+	right: 0;
+	background-image: url(../Pictures/patterns/toxicSmall.jpg);
+	background-size: 26.7vw;
+	background-repeat: repeat;
+	background-position-x: calc(   -4vw - 6.675vw + 6.675vw);/* -4vw */
+	background-position-y: calc(9.475vw + 6.675vw + 6.675vw); /* 2.8vw */
+	animation-duration: 8.3s;
+	animation-name: visionToggle;
+	animation-iteration-count: infinite;
+}
+.ArticleBGAlter2{
+	z-index: -2;
+	position:absolute;
+	user-select: none;
+	left: 0;
+	right: 0;
+	background-image: url(../Pictures/patterns/toxicSmall.jpg);
+	background-size: 26.7vw;
+	background-repeat: repeat;
+	background-position-x: calc(   -4vw + 6.675vw);/* -4vw */
+	background-position-y: calc(9.475vw - 6.675vw - 13.35vw); /* 2.8vw */
+	animation-duration: 8.3s;
+	animation-name: visionToggle2;
+	animation-iteration-count: infinite;
+}
+
+
+.ArticleSecondBG{
+	z-index: -1;
+	position:absolute;
+	user-select: none;
+	left: 0;
+	right: 0;
+	background-image: url(../Pictures/patterns/toxicSmall.jpg);
+	background-size: 26.7vw;
+	background-repeat: repeat;
+	background-position-x: calc(   -4vw - 6.675vw - 13.35vw);
+	background-position-y: calc(9.475vw - 6.675vw); /* 13.35vw */
+	animation-duration: 6.7s;
+	animation-name: disappear;
+	animation-iteration-count: infinite;
+}
+.ArticleSThirdBG{
+	z-index: -1;
+	position:absolute;
+	user-select: none;
+	left: 0;
+	right: 0;
+	background-image: url(../Pictures/patterns/toxicSmall.jpg);
+	background-size: 26.7vw;
+	background-repeat: repeat;
+	background-position-x: calc(   -4vw + 6.675vw + 13.35vw); /* -4vw */
+	background-position-y: calc(9.475vw + 6.675vw + 13.35vw); /* 2.8vw   13.35vw 6.675vw */
+	animation-duration: 7.3s;
+	animation-name: disappear2;
+	animation-iteration-count: infinite;
+}
+
+@keyframes visionToggle {
+	0% {
+		opacity: 1;
+	}
+	25% {
+		opacity: .66;
+	}
+	50% {
+		opacity: .33;
+	}
+	75% {
+		opacity: 0.66;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+@keyframes visionToggle2 {
+	0% {
+		opacity: 0.5;
+	}
+	25% {
+		opacity: 1;
+	}
+	50% {
+		opacity: 0.5;
+	}
+	75% {
+		opacity: 0.0;
+	}
+	100% {
+		opacity: 0.5;
+	}
+}
+@keyframes disappear {
+	0% {
+		opacity: 0.5;
+	}
+	23% {
+		opacity: 0.7;
+	}
+	27% {
+		opacity: 0.85;
+	}
+	45% {
+		opacity: 0.6;
+	}
+	55% {
+		opacity: 0.37;
+	}
+	85% {
+		opacity: 0.2;
+	}
+	95% {
+		opacity: 0.35;
+	}
+	100% {
+		opacity: 0.5;
+	}
+}
+@keyframes disappear2 {
+	0% {
+		opacity: .8;
+	}
+	20% {
+		opacity: 0.55;
+	}
+	40% {
+		opacity: 0.32;
+	}
+	45% {
+		opacity: 0.2;
+	}
+	55% {
+		opacity: 0.25;
+	}
+	66% {
+		opacity: 0.45;
+	}
+	80% {
+		opacity: 0.65;
+	}
+	92% {
+		opacity: 0.7;
+	}
+	100% {
+		opacity: 0.8;
+	}
 }
 
 .MainSlogan{
