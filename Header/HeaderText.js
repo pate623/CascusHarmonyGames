@@ -12,7 +12,7 @@ if(IsMobile){
 
         <div class="scrolledHeader">
             <a href="index.html"><div class="headerLogo_Mobile"></div></a>
-            <div class="headerBurger_Mobile HeaderBurger_MobileScroll">
+            <div class="headerBurger_Mobile headerBurger_MobileScroll">
                 <div class="headerMenuLine_Mobile"></div>
                 <div class="headerMenuLine_Mobile"></div>
                 <div class="headerMenuLine_Mobile"></div>
