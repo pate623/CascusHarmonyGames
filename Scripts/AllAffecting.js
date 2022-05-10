@@ -33,9 +33,11 @@ function InitializeBannerShiftSettings(){
     var cssRoot = document.querySelector(':root');
 
     TopBannerHeight = parseFloat($(".TopBanner").css("height"));
-    HeaderHeight = parseFloat($(".Header").css("height"));
+    
+    // Some issues with mobile
+    HeaderHeight = parseFloat($(".Header").css("height")) == 0 ? HeaderHeight : parseFloat($(".Header").css("height"))
     if(IsMobile){
-        HeaderHeight *= 1.5 // Some issues with mobile
+        HeaderHeight *= 1.5
     }
 
     MaxEffectAt = HeaderHeight + TopBannerHeight;
@@ -60,5 +62,9 @@ function CountArticleBackgroundSizes(){
     let auxillaryBottom =  $(".Footer").position().top;
 
     $(".ArticleBackgrounds").css("top", TopBannerHeight + HeaderHeight);
-    $(".ArticleBackgrounds").css("height", (auxillaryBottom - (TopBannerHeight + HeaderHeight)));
+    if(IsMobile){
+        $(".ArticleBackgrounds").css("height", (auxillaryBottom - (TopBannerHeight + (HeaderHeight / 3))));
+    }else{
+        $(".ArticleBackgrounds").css("height", (auxillaryBottom - (TopBannerHeight + HeaderHeight)));
+    }
 }
