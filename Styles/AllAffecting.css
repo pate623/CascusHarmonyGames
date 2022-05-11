@@ -105,10 +105,9 @@ article{
 	background-repeat: repeat;
 	background-position-x: calc(   -4vw + 13.35vw);
 	background-position-y: calc(9.475vw + 13.35vw);
-	animation-duration: 19.31s;
+	animation-duration: 19s;
 	animation-name: visionToggle;
 	animation-iteration-count: infinite;
-	animation-timing-function: cubic-bezier(.55,.25,.74,.4);
 }
 .articleBGAlter2{
 	z-index: -2;
@@ -121,10 +120,9 @@ article{
 	background-repeat: repeat;
 	background-position-x: calc(   -4vw + 6.675vw);
 	background-position-y: calc(9.475vw - 6.675vw); 
-	animation-duration: 17.33s;
+	animation-duration: 17s;
 	animation-name: visionToggle2;
 	animation-iteration-count: infinite;
-	/* animation-timing-function: cubic-bezier(.66,.48,.27,.76); */
 }
 
 
@@ -139,10 +137,9 @@ article{
 	background-repeat: repeat;
 	background-position-x: calc(   -4vw - 13.35vw);
 	background-position-y: calc(9.475vw);
-	animation-duration: 13.19s;
+	animation-duration: 13s;
 	animation-name: disappear;
 	animation-iteration-count: infinite;
-	/* animation-timing-function: cubic-bezier(.77,.36,.32,.91); */
 }
 .articleSThirdBG{
 	z-index: -1;
@@ -155,10 +152,9 @@ article{
 	background-repeat: repeat;
 	background-position-x: calc(   -4vw - 6.675vw);
 	background-position-y: calc(9.475vw - 6.675vw);
-	animation-duration: 10.97s;
+	animation-duration: 11s;
 	animation-name: disappear2;
 	animation-iteration-count: infinite;
-	/* animation-timing-function: cubic-bezier(.15,.69,.31,.31); */
 }
 
 @keyframes visionToggle {
@@ -174,44 +170,44 @@ article{
 }
 @keyframes visionToggle2 {
 	0% {
-		opacity: 0.5;
+		opacity: 0.45;
 	}
 	25% {
-		opacity: 1;
+		opacity: 0.9;
 	}
 	75% {
 		opacity: 0;
 	}
 	100% {
-		opacity: 0.5;
+		opacity: 0.45;
 	}
 }
 @keyframes disappear {
 	0% {
-		opacity: 0.2;
+		opacity: 0.17;
 	}
 	40% {
-		opacity: 1.0;
+		opacity: 0.835;
 	}
 	90% {
 		opacity: 0.0;
 	}
 	100% {
-		opacity: 0.2;
+		opacity: 0.17;
 	}
 }
 @keyframes disappear2 {
 	0% {
-		opacity: 0.75;
+		opacity: 0.5;
 	}
 	37.5% {
 		opacity: 0.0;
 	}
 	87.5% {
-		opacity: 1.0;
+		opacity: 0.75;
 	}
 	100% {
-		opacity: 0.75;
+		opacity: 0.5;
 	}
 }
 
