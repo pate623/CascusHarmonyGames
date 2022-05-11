@@ -1,5 +1,5 @@
 :root {
-	--BannerTopPercentage: 24%;
+	--BannerTopPercentage: 25%;
 }
 
 topBanner {
@@ -15,4 +15,6 @@ topBanner {
 	background-size: contain;
 	background-repeat: no-repeat;
 	background-position: center;
+	width: 45%;
+	height: 37%;
 }
