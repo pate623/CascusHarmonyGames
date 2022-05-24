@@ -17,12 +17,14 @@ $(document).ready(function(){
     InitializeBannerShiftSettings()
     CountNewBannerAndBackgroundLocation()
     CountArticleBackgroundSizes()
+    CountBattleMagiciansVideoHeight()
 });
 
 $(window).resize(function(){
     InitializeBannerShiftSettings()
     CountNewBannerAndBackgroundLocation()
     CountArticleBackgroundSizes()
+    CountBattleMagiciansVideoHeight()
 });
 
 $(window).scroll(function(event){
@@ -68,4 +70,9 @@ function CountArticleBackgroundSizes(){
     }else{
         $(".articleBackgrounds").css("height", (auxillaryBottom - (TopBannerHeight + HeaderHeight)));
     }
+}
+
+function CountBattleMagiciansVideoHeight(){
+    let videoWidth = parseFloat($(".battleMagiciansVideo").css("width"));
+    $(".battleMagiciansVideo").css("height", videoWidth * 0.5625);
 }
