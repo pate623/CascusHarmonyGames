@@ -1,15 +1,21 @@
 var MobileMenuIsOpen = false;
 
-// Mobile header height
 $(document).ready(function(){
+    MobileHeaderHeight()
+    InitializeButtons()
+    DetectUpScroll()
+});
+
+// Mobile header height
+function MobileHeaderHeight(){
 	if(IsMobile){
         $(".header").css({"height" : "12vw"});
         $(".scrolledHeader").css({"height" : "12vw"});
     }
-});
+}
 
-// Toggle mobile links menu visibility
-$(document).ready(function(){
+function InitializeButtons(){
+    // Toggle mobile links menu visibility
     $(".headerBurger_Mobile").click(function() {
         $(".headerLinks_Mobile").css("visibility", "visible");
         $(".headerCross_Mobile").css("visibility", "visible");
@@ -20,9 +26,7 @@ $(document).ready(function(){
         $(".scrolledHeader").css("visibility", "visible");
         MobileMenuIsOpen = true;
     })
-});
 
-$(document).ready(function(){
     $(".headerCross_Mobile").click(function() {
         $(".headerLinks_Mobile").css("visibility", "collapse");
         $(".headerCross_Mobile").css("visibility", "collapse");
@@ -39,13 +43,13 @@ $(document).ready(function(){
             $(".headerBurger_Mobile").css("display", "block");
         }
     })
-});
+}
 
 /*
 / Detect when user is scrolling up.
 / When they are scrolling up showcase the mobile header.
 */
-$(document).ready(function(){
+function DetectUpScroll(){
     if(IsMobile){
         let scrollingDownLastPosition;
         let scrollingUpLastPosition;
@@ -88,4 +92,4 @@ $(document).ready(function(){
             }
         }
     }
-});
+}

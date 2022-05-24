@@ -1,4 +1,4 @@
-// check if on mobile
+// (Awake) Check if on mobile 
 var IsMobile = false;
 
 if(/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|ipad|iris|kindle|Android|Silk|lge |maemo|midp|mmp|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows (ce|phone)|xda|xiino/i.test(navigator.userAgent) 
@@ -6,16 +6,19 @@ if(/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine
     IsMobile = true;
 }
 
-// Hide carousel buttons
 $(document).ready(function(){
+	HideCarouselButtons()
+	CarouselSwipeDetection()
+});
+
+function HideCarouselButtons(){
     if(IsMobile){
         $(".carousel-indicators .li").css("visibility", "hidden");
         $(".carousel-indicators").css("visibility", "hidden");   
     }
-});
+}
 
-// Swipe detection for carousel
-$(document).ready(function(){
+function CarouselSwipeDetection(){
 	let carousel = document.querySelector("#kuiperBeltCarousel");
 	if(carousel == null){return}
 	
@@ -41,9 +44,9 @@ $(document).ready(function(){
 	    let diffY = initialY - currentY;
 	
 	    if (Math.abs(diffX) > Math.abs(diffY)) { // Sliding horizontally
-	        if (diffX > 0) { // swiped left
+	        if (diffX > 0) { // Swiped left
                 $('.carousel').carousel('next')
-	        }else{ // swiped right
+	        }else{ // Swiped right
                 $('.carousel').carousel('prev')
 	        }
 	    }
@@ -52,4 +55,4 @@ $(document).ready(function(){
 	    initialY = null;
 	    e.preventDefault();
 	};
-})
+}

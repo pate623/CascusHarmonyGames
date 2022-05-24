@@ -12,19 +12,18 @@ var MiddleBannerHeight = 0.0;
 var MiddleBannerTop = 0.0;
 var MiddleBannerMaxAddition = 0.0;
 
-// Change banner shifting settings on document load an on window resize
 $(document).ready(function(){
+    CountBattleMagiciansVideoHeight()
     InitializeBannerShiftSettings()
     CountNewBannerAndBackgroundLocation()
     CountArticleBackgroundSizes()
-    CountBattleMagiciansVideoHeight()
 });
 
 $(window).resize(function(){
+    CountBattleMagiciansVideoHeight()
     InitializeBannerShiftSettings()
     CountNewBannerAndBackgroundLocation()
     CountArticleBackgroundSizes()
-    CountBattleMagiciansVideoHeight()
 });
 
 $(window).scroll(function(event){
@@ -55,7 +54,7 @@ function CountNewBannerAndBackgroundLocation(){
     currentScroll = parseFloat($(window).scrollTop())
 
     // Between 0 and 1
-    var currentEffect = (Math.max(0, (Math.min(currentScroll, MaxEffectAt)))) / MaxEffectAt;
+    let currentEffect = (Math.max(0, (Math.min(currentScroll, MaxEffectAt)))) / MaxEffectAt;
 
     $(".topBanner").css("background-position-y", MaxPixelShift * currentEffect - (HeaderHeight * BackgroundShiftEffectMultiplier));
     $(".middleBannerImage").css("top", MiddleBannerTop + currentEffect * MiddleBannerMaxAddition);
