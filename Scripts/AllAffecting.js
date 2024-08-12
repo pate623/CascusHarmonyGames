@@ -46,7 +46,7 @@ function InitializeBannerShiftSettings(){
     MaxPixelShift = TopBannerHeight * BackgroundShiftEffectMultiplier;
 
     MiddleBannerHeight = parseFloat($(".middleBannerImage").css("height"))
-    MiddleBannerTop = TopBannerHeight * 0.01 *  parseFloat(getComputedStyle(cssRoot).getPropertyValue('--BannerTopPercentage'))
+    MiddleBannerTop = TopBannerHeight * 0.01 * parseFloat(getComputedStyle(cssRoot).getPropertyValue('--BannerTopPercentage'))
     MiddleBannerMaxAddition = TopBannerHeight - MiddleBannerHeight * MiddleBannerShiftMultiplier;
 }
 
@@ -61,7 +61,7 @@ function CountNewBannerAndBackgroundLocation(){
 }
 
 function CountArticleBackgroundSizes(){
-    let auxillaryBottom =  $(".footer").position().top;
+    let auxillaryBottom = $(".footer").position().top + 5; // Account for rounding
 
     $(".articleBackgrounds").css("top", TopBannerHeight + HeaderHeight);
     if(IsMobile){
